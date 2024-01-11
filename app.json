@@ -5,6 +5,20 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#8A2BE2"
+      },
+      "package": "com.testes.tasks",
+      "versionCode": 1
+    },
+    "extra": {
+      "eas": {
+        "projectId": "aabeee89-ad67-4f28-a12c-a00d9dfb39be"
+      }
+    },
+    "owner": "rodcordeiro"
   }
 }

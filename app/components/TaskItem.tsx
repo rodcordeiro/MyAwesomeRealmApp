@@ -1,44 +1,38 @@
-import React from 'react';
-import Realm from 'realm';
-import {View, Text, Pressable, StyleSheet} from 'react-native';
+import React from "react";
+import Realm from "realm";
+import { View, Text, Pressable, StyleSheet } from "react-native";
 
-import {shadows} from '../styles/shadows';
-import colors from '../styles/colors';
-import {Task} from '../models/Task';
+import { shadows } from "../styles/shadows";
+import colors from "../styles/colors";
+import { Bill } from "../models/Bill";
 
 type TaskItemProps = {
-  task: Task & Realm.Object;
-  onToggleStatus: () => void;
-  onDelete: () => void;
+  task: Bill & Realm.Object;
+  // onToggleStatus: () => void;
+  // onDelete: () => void;
 };
 
-export const TaskItem = React.memo<TaskItemProps>(
-  ({task, onToggleStatus, onDelete}) => {
-    return (
-      <View style={styles.task}>
-        <Pressable
-          onPress={onToggleStatus}
-          style={[styles.status, task.isComplete && styles.completed]}>
-          <Text style={styles.icon}>{task.isComplete ? '✓' : '○'}</Text>
-        </Pressable>
-        <View style={styles.descriptionContainer}>
-          <Text numberOfLines={1} style={styles.description}>
-            {task.description}
-          </Text>
-        </View>
-        <Pressable onPress={onDelete} style={styles.deleteButton}>
-          <Text style={styles.deleteText}>Delete</Text>
-        </Pressable>
+export const TaskItem = React.memo<TaskItemProps>(({ task }) => {
+  console.log(task);
+  return (
+    <View style={styles.task}>
+      <View style={styles.descriptionContainer}>
+        <Text numberOfLines={1} style={styles.description}>
+          {task.description}
+        </Text>
       </View>
-    );
-  },
-);
+      {/* <Pressable onPress={onDelete} style={styles.deleteButton}>
+          <Text style={styles.deleteText}>Delete</Text>
+        </Pressable> */}
+    </View>
+  );
+});
 
 const styles = StyleSheet.create({
   task: {
     height: 50,
-    alignSelf: 'stretch',
-    flexDirection: 'row',
+    alignSelf: "stretch",
+    flexDirection: "row",
     marginVertical: 8,
     backgroundColor: colors.white,
     borderRadius: 5,
@@ -46,7 +40,7 @@ const styles = StyleSheet.create({
   },
   descriptionContainer: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   description: {
     paddingHorizontal: 10,
@@ -55,8 +49,8 @@ const styles = StyleSheet.create({
   },
   status: {
     width: 50,
-    height: '100%',
-    justifyContent: 'center',
+    height: "100%",
+    justifyContent: "center",
     borderTopLeftRadius: 5,
     borderBottomLeftRadius: 5,
     backgroundColor: colors.gray,
@@ -65,7 +59,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.purple,
   },
   deleteButton: {
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   deleteText: {
     marginHorizontal: 10,
@@ -74,8 +68,8 @@ const styles = StyleSheet.create({
   },
   icon: {
     color: colors.white,
-    textAlign: 'center',
+    textAlign: "center",
     fontSize: 17,
-    fontWeight: 'bold',
+    fontWeight: "bold",
   },
 });

@@ -1,3 +1,3 @@
-import {Task} from './Task';
+import { Bill } from "./Bill";
 
-export const schemas = [Task];
+export const schemas = [Bill];
