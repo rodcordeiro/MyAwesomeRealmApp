@@ -20,7 +20,7 @@
   "devDependencies": {
     "@babel/core": "^7.22.5",
     "@babel/plugin-proposal-decorators": "^7.22.5",
-    "@realm/babel-plugin": "^0.1.1",
+    "@realm/babel-plugin": "^0.2.0",
     "@types/react": "~18.2.13",
     "typescript": "^5.1.3"
   },

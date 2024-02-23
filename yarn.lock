@@ -2247,10 +2247,10 @@
     invariant "^2.2.4"
     nullthrows "^1.1.1"
 
-"@realm/babel-plugin@^0.1.1":
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/@realm/babel-plugin/-/babel-plugin-0.1.1.tgz#e4447333d11c52d1d190ac8f4549a895d54e30d7"
-  integrity sha512-abSu6oXDkCes1lfI1XE0aWiS4vG86KukjmD09ufaBa/QCs27/1FNqtEOuWvCf/QGERWIGj4GwDJf7DHELvIdKw==
+"@realm/babel-plugin@^0.2.0":
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/@realm/babel-plugin/-/babel-plugin-0.2.0.tgz#6cbdf32fb9de539829683eb8281aab9c834a12c4"
+  integrity sha512-n+lLIl03Pdwqsx486M8EBFcGcbDIvipm0bb8ihPXwGEOgeDlnuy9v4FAyRcgRe4SFN9zQ1vFNMDqFzBgk5Z2rA==
 
 "@realm/react@^0.6.0":
   version "0.6.2"
